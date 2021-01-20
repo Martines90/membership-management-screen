@@ -1,26 +1,28 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React from 'react';
+import './App.css';
+import SelectBox, { Option } from './components/selectBox/SelectBox';
+
+const mockOptiond: Array<Option> = [
+  {
+    value: 10,
+    text: 'Ten',
+  },
+  {
+    value: 20,
+    text: 'Twenty',
+  },
+  {
+    value: 30,
+    text: 'Thirty',
+  },
+];
 
 function App() {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload. TTT
-        </p>
-                <a
-                    className="App-link"
-                    href="https://github.com/EliEladElrom/react-tutorials"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Eli Elad Elrom - React Tutorials
-        </a>
-            </header>
-        </div>
-    )
+  return (
+    <div className='App'>
+      <SelectBox options={mockOptiond} />
+    </div>
+  );
 }
 
-export default App
+export default App;
